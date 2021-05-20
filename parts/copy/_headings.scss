@@ -1,0 +1,24 @@
+@import "../variables/index";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	font-family: $font__secondary;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+h3 {
+	font-size: 22px;
+}

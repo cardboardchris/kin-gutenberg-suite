@@ -1,0 +1,40 @@
+{
+  "name": "uncg-online-gutenberg-base-theme",
+  "version": "1.0.0",
+  "description": "UNCG Online Gutenberg Base Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/uncgonline/uncg_online_base_theme.git"
+  },
+  "author": "UNCG Online",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "autoprefixer": "^10.1.0",
+    "browser-sync": "^2.26.13",
+    "cssnano": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel-minify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "mathsass": "^0.11.0"
+  },
+  "dependencies": {
+    "minimatch": "^3.0.4",
+    "postcss": "^8.2.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie 8",
+    "ie 9"
+  ]
+}

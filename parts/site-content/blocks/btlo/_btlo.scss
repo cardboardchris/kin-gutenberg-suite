@@ -1,0 +1,33 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.btlo-block {
+	@include universal-bottom-margin;
+
+	.btlo-description {
+		position: relative;
+		margin-bottom: 20px;
+	}
+
+	.btlo-node {
+		overflow: hidden;
+		position: relative;
+
+		.button-container {
+			text-align: center;
+		}
+	}
+
+	button {
+		margin: 10px 0;
+	}
+
+	.debug-buttons {
+		margin: 0 40px 0 120px;
+		text-align: center;
+
+		button {
+			padding: 10px 20px;
+		}
+	}
+}

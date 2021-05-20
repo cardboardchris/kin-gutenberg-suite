@@ -1,0 +1,10 @@
+@import "../../mixins/index";
+@import "../../variables/index";
+
+@include flex-icons(2);
+
+.indent-icon svg {
+	.st0 {
+		fill: #333;
+	}
+}

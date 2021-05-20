@@ -1,0 +1,87 @@
+@import "../../mixins/index";
+@import "../../variables/index";
+$color__search-button: $color__white;
+
+.search-button {
+	padding: 5px;
+	background-color: transparent;
+
+	&:active,
+	&:focus,
+	&:hover {
+		background-color: transparent;
+	}
+
+	svg {
+		overflow: visible;
+		width: 20px;
+		height: 20px;
+
+		.st0 {
+			fill: $color__search-button;
+			stroke: transparent;
+		}
+	}
+
+	&[aria-expanded="true"] {
+		svg .st0 {
+			fill: $color__yellow;
+		}
+	}
+}
+
+.search-box {
+	display: none;
+	position: absolute;
+	top: 70px;
+	right: 30px;
+	width: 280px;
+	border: 3px solid $color__yellow;
+
+	input,
+	label {
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	input {
+		padding: 5px 14px;
+		border: 1.5px solid $color__search-button;
+		border-radius: 0;
+	}
+
+	.search-submit {
+		display: none;
+	}
+
+	@media screen and (min-width: $breakpoint__sm) {
+		left: auto;
+
+		input,
+		label {
+			width: 400px;
+		}
+	}
+}
+
+.search-form {
+	//.search-field {
+	//	border-radius: 4px 0 0 4px;
+	//}
+
+	.search-submit {
+		position: relative;
+		top: -1px;
+		height: 34px;
+		margin-left: -5px;
+		border-radius: 0 4px 4px 0;
+
+		svg {
+			overflow: visible;
+			position: relative;
+			top: 3px;
+			width: 15px;
+			height: 15px;
+		}
+	}
+}

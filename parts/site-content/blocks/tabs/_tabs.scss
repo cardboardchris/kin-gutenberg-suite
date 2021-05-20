@@ -1,0 +1,6 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.wp-block-uncgonline-block-tabs {
+	@include universal-bottom-margin;
+}

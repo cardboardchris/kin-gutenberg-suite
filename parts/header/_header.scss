@@ -1,0 +1,60 @@
+@import "../mixins/index";
+@import "../variables/index";
+
+.site-header {
+	@include universal-padding;
+	@include universal-max-width;
+
+	display: flex;
+	position: relative;
+	background-color: $color__blue-dk;
+	background-position: top;
+	background-size: cover;
+
+	.site-branding {
+		display: flex;
+		width: 100%;
+		margin: 20px 0;
+
+		p.site-title {
+			margin: 0;
+
+			flex-grow: 1;
+
+			a {
+				display: inline-block;
+				margin-top: 6px;
+				color: $color__white;
+				font:  {
+					family: $font__main;
+					size: 26px;
+					weight: 800;
+				}
+				text-transform: uppercase;
+
+				&:hover,
+				&:active,
+				&:focus {
+					text-decoration: none;
+				}
+
+				.site-description {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.site-banner {
+	@include universal-max-width;
+
+	height: 150px;
+	background-position: center;
+}
+
+@media screen and (min-width: $breakpoint__md) {
+	.site-header .site-branding p.site-title a .site-description {
+		display: inline;
+	}
+}

@@ -1,0 +1,32 @@
+@import "../variables/_index";
+
+a {
+	text-decoration: none;
+
+	&:active,
+	&:focus,
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+}
+
+// Force long links to wrap in the site content
+.site-content {
+	a {
+		word-wrap: break-word;
+		word-break: break-all;
+		word-break: break-word;
+		hyphens: auto;
+
+		overflow-wrap: break-word;
+
+		&.new-window-link {
+			// Causes overflow with long links.
+			//white-space: nowrap;
+		}
+	}
+}

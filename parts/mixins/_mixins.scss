@@ -1,0 +1,49 @@
+@import "../variables/index";
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// Clearfix
+@mixin clearfix {
+	display: table;
+	table-layout: fixed;
+	content: "";
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after {
+	clear: both;
+}
+
+// Breakpoints
+@mixin bp($sizeValue) {
+	@media screen and (min-width: $sizeValue) {
+		@content;
+	}
+}
+
+@mixin universal-padding {
+	@include bp($breakpoint__sm) {
+		padding-right: $padding__tablet;
+		padding-left: $padding__tablet;
+	}
+
+	padding-right: $padding__mobile;
+	padding-left: $padding__mobile;
+}
+
+@mixin universal-max-width {
+	@include bp($breakpoint__xl) {
+		max-width: 1366px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+@mixin universal-bottom-margin {
+	margin-bottom: $margin__bottom;
+}

@@ -1,0 +1,26 @@
+@import "../variables/index";
+$color__text-button: $color__white;
+
+button,
+.button,
+.button:visited,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	display: block;
+	width: fit-content;
+	padding: 12px 16px;
+	border: none;
+	color: $color__text-button;
+	font-size: 16px;
+	line-height: 1;
+	text-decoration: none;
+
+	&:active,
+	&:focus,
+	&:hover {
+		color: $color__text-button;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}

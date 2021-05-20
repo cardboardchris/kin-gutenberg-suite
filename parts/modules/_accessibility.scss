@@ -1,0 +1,36 @@
+@import "../variables/index";
+$color__text-screen-reader: $color__blue-dk;
+$color__background-screen-reader: $color__not-white;
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+
+	&:focus {
+		display: block;
+		clip: auto !important;
+		z-index: 100000; /* Above WP toolbar. */
+		top: 5px;
+		left: 5px;
+		width: auto;
+		height: auto;
+		padding: 15px 23px 14px;
+		border-radius: 3px;
+		color: $color__text-screen-reader;
+		background-color: $color__background-screen-reader;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		font-size: 14px;
+		font-weight: 700;
+		line-height: normal;
+		text-decoration: none;
+	}
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}

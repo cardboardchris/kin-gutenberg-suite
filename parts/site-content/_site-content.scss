@@ -1,0 +1,66 @@
+@import "../mixins/index";
+@import "../variables/index";
+@import "acccessibility/link-new-window/index";
+
+.site {
+	background-color: $color__gray_lt;
+}
+
+.content-area {
+	background-color: $color__white;
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	@include universal-padding;
+	@include universal-max-width;
+}
+
+.entry-content {
+	padding-top: 20px;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+@include bp($breakpoint__sm) {
+	.site-content {
+		@include universal-padding;
+		@include universal-max-width;
+
+		margin-top: -50px;
+	}
+	.content-area {
+		margin-top: 0;
+	}
+
+	.hentry {
+		display: flex;
+	}
+
+	.entry-content {
+		margin: 20px 35px 0;
+		padding: 0;
+	}
+}

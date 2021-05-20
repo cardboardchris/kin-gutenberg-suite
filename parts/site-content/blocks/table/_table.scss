@@ -1,0 +1,43 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+$color__text-th: $color__white;
+$color__background-th: $color__gray-dk;
+$color__border: $color__white;
+$color__background-even: #ededed;
+$color__background-odd: #f4f4f4;
+
+.wp-block-table {
+	@include universal-bottom-margin;
+
+	margin: 0;
+	table {
+		margin-bottom: $margin__bottom;
+		thead th {
+			border: 0;
+			color: $color__text-th;
+			background: $color__background-th;
+		}
+
+		td {
+			border: 0;
+		}
+
+		td,
+		th {
+			padding: 0.4rem 3rem;
+		}
+	}
+
+	&.is-style-stripes {
+		border-bottom: 0;
+		table {
+			tbody tr:nth-of-type(odd) {
+				background-color: $color__background-odd;
+			}
+
+			tbody tr:nth-of-type(even) {
+				background-color: $color__background-even;
+			}
+		}
+	}
+}

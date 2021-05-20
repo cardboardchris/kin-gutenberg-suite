@@ -1,0 +1,19 @@
+@mixin svg-icon($class, $scale, $width, $height) {
+	.#{$class} {
+		svg {
+			width: $scale * $width;
+			height: $scale * $height;
+		}
+	}
+}
+
+@mixin flex-icons($scale) {
+	@include svg-icon("flex-icon-assignment", $scale, 57.1px, 57.1px);
+	@include svg-icon("flex-icon-discussion", $scale, 66.2px, 55.2px);
+	@include svg-icon("flex-icon-link", $scale, 33.9px, 57.2px);
+	@include svg-icon("flex-icon-objectives", $scale, 63.3px, 45.1px);
+	@include svg-icon("flex-icon-quote", $scale, 56.8px, 57.2px);
+	@include svg-icon("flex-icon-reading", $scale, 66.3px, 46.9px);
+	@include svg-icon("flex-icon-video", $scale, 65.2px, 47.8px);
+	@include svg-icon("flex-icon-quiz", $scale, 37.4px, 66px);
+}

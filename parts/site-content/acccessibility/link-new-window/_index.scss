@@ -1,0 +1,52 @@
+@font-face {
+	font-family: "uncg-online-accessibility";
+	src: url("parts/site-content/acccessibility/link-new-window/fonts/fonts/uncg-online-accessibility.eot?y26krz");
+	src: url("parts/site-content/acccessibility/link-new-window/fonts/fonts/uncg-online-accessibility.eot?y26krz#iefix") format("embedded-opentype"),
+	url("parts/site-content/acccessibility/link-new-window/fonts/fonts/uncg-online-accessibility.ttf?y26krz") format("truetype"),
+	url("parts/site-content/acccessibility/link-new-window/fonts/fonts/uncg-online-accessibility.woff?y26krz") format("woff"),
+	url("parts/site-content/acccessibility/link-new-window/fonts/fonts/uncg-online-accessibility.svg?y26krz#uncg-online-accessibility") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: "uncg-online-accessibility" !important;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1;
+	text-transform: none;
+
+	speak: none;
+}
+
+.icon-new-tab:before {
+	content: "\ea7e";
+}
+
+.screen-reader-text {
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
+
+a[target="_blank"]:after {
+	font-family: "uncg-online-accessibility" !important;
+	font-size: 75%;
+	content: " \ea7e";
+}
+
+a.img-link[target="_blank"]:after {
+	display: none;
+}
+
+a[target="_blank"]:focus {
+	outline: thin dotted;
+}

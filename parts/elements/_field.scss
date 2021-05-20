@@ -1,0 +1,38 @@
+@import "../variables/index";
+$color__text-input: $color__gray-md;
+$color__text-input-focus: $color__gray-dk;
+$color__border-input: $color__gray-lt;
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	padding: 3px;
+	border: 1px solid $color__border-input;
+	border-radius: 3px;
+	color: $color__text-input;
+
+	&:focus {
+		color: $color__text-input-focus;
+	}
+}
+
+select {
+	border: 1px solid $color__border-input;
+}
+
+textarea {
+	width: 100%;
+}

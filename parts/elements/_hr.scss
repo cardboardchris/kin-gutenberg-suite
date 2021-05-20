@@ -1,0 +1,9 @@
+@import "../variables/index";
+$color__background-hr: $color__gray-lt;
+
+hr {
+	height: 1px;
+	margin-bottom: 1.5em;
+	border: 0;
+	background-color: $color__background-hr;
+}

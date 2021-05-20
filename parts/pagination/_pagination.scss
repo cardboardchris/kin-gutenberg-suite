@@ -1,0 +1,107 @@
+@import "../mixins/index";
+@import "../variables/index";
+$color__text-pagination: $color__white;
+
+.pagination.spartan-pagination {
+	@include center-block;
+
+	clear: both;
+	overflow: hidden;
+	margin: 40px 0;
+	padding: 0;
+	border-radius: 0;
+	font-family: $font__main;
+	font-weight: 600;
+	text-align: center;
+
+	img {
+		vertical-align: inherit;
+	}
+
+	li {
+		&:before {
+			display: none;
+		}
+
+		&:first-child,
+		&:last-child {
+			a {
+				padding: 9px 0 7px;
+			}
+		}
+
+		&:first-child {
+			a {
+				padding-right: 15px;
+			}
+		}
+
+		&:last-child {
+			a {
+				padding-left: 15px;
+			}
+		}
+
+		a {
+			&:hover {
+				background-color: $color__blue-dk;
+				text-decoration: none;
+			}
+
+			&.disabled {
+				background: transparent;
+				cursor: default;
+			}
+		}
+	}
+
+	ul {
+		margin: 0 6px;
+		padding: 0;
+
+		li {
+			display: block;
+			float: left;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			text-indent: 0;
+			list-style-type: none;
+
+			a {
+				display: block;
+				margin: 0 2px;
+				padding: 8px 0;
+				color: $color__text-pagination;
+				font-family: $font__main;
+				font-size: 15px;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.back-button,
+	.next-button {
+		transition: transform 0.25s ease-out;
+	}
+
+	.spartan-pagination-nav-buttons .back-button:hover {
+		transform: translateX(-5px);
+	}
+
+	.spartan-pagination-nav-buttons .next-button:hover {
+		transform: translateX(5px);
+	}
+
+	.spartan-pagination-location-text {
+		margin-bottom: -10px;
+	}
+}
+
+.spartan-pagination-nav-buttons {
+	display: flex;
+	margin-top: 15px;
+
+	justify-content: center;
+}
