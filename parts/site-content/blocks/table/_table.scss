@@ -1,7 +1,7 @@
 @import "../../../mixins/index";
 @import "../../../variables/index";
-$color__text-th: $color__white;
-$color__background-th: $color__gray-dk;
+$color__text-th: $color__black;
+$color__background-th: $color__gray-md;
 $color__border: $color__white;
 $color__background-even: #ededed;
 $color__background-odd: #f4f4f4;
@@ -25,6 +25,7 @@ $color__background-odd: #f4f4f4;
 		td,
 		th {
 			padding: 0.4rem 3rem;
+			background-color: $color__gray-lt;
 		}
 	}
 

@@ -1,6 +1,10 @@
 ul,
 ol {
 	margin-bottom: 1em;
+
+	& > li {
+		margin: 10px 0;
+	}
 }
 
 ul {

@@ -55,8 +55,8 @@
 		svg {
 			.st0 {
 				transform: rotate(45deg);
+				// fill set in customizer.php
 
-				fill: $color__yellow;
 				x: 3;
 				y: -3;
 			}
@@ -67,8 +67,8 @@
 
 			.st2 {
 				transform: rotate(-45deg);
+				// fill set in customizer.php
 
-				fill: $color__yellow;
 				x: -10;
 				y: 13;
 			}

@@ -41,13 +41,7 @@
     </header><!-- #masthead -->
 
     <?php if (get_field('site_banner', 'option')) : ?>
-        <div class="site-banner" style="background-image: url(<?php the_field('site_banner', 'option'); ?>);">
-            <?php
-            //    if ( get_current_page_depth() > 1 ) {
-            include( __DIR__ . '/page-menu/page-menu.php' );
-            //    }
-            ?>
-        </div>
+        <div class="site-banner" style="background-image: url(<?php the_field('site_banner', 'option'); ?>);"></div>
     <?php endif; ?>
 
     <div id="content" class="site-content">

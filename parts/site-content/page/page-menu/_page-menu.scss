@@ -5,14 +5,10 @@ $color__text-page-menu: $color__black;
 $color__page-menu-arrow: $color__black;
 
 .page-navigation {
-	@include universal-max-width;
-
 	position: relative;
-	top: 50%;
-	margin: 0 60px;
-	transform: translateY(-50%);
-
-	justify-content: center;
+	top: -94px;
+	max-width: 340px;
+	margin: 0 auto -42px auto;
 
 	.parent-title {
 		display: none;
@@ -33,14 +29,12 @@ $color__page-menu-arrow: $color__black;
 	}
 
 	@media screen and (min-width: $breakpoint__sm) {
-		top: 0;
-		width: 275px;
-		margin-top: 40px;
-		padding: 0;
-		background-color: transparent;
+		top: -72px;
 	}
 
-	@media screen and (min-width: $breakpoint__md) {
+	@media screen and (min-width: $breakpoint__lg) {
+		top: 0;
+		margin: 25px 0 0;
 		.parent-title {
 			display: block;
 			margin: 10px 25px;
@@ -52,6 +46,10 @@ $color__page-menu-arrow: $color__black;
 			text-transform: uppercase;
 		}
 	}
+}
+
+.home .page-navigation {
+	display: none;
 }
 
 .page-navigation-mobile {
@@ -84,7 +82,6 @@ $color__page-menu-arrow: $color__black;
 			width: 0;
 			height: 0;
 			margin: 0;
-			//transform: rotate(45deg);
 			border-top: 5px solid $color__page-menu-arrow;
 			border-right: 4px solid transparent;
 			border-bottom: 0;
@@ -105,6 +102,7 @@ $color__page-menu-arrow: $color__black;
 	.dropdown-menu {
 		top: calc(100% - 1px);
 		width: 100%;
+		margin: 0;
 		padding: 0;
 		border: none;
 		border-radius: 0 0 21px 21px;
@@ -147,17 +145,21 @@ $color__page-menu-arrow: $color__black;
 		}
 	}
 
-	@media screen and (min-width: $breakpoint__sm) {
+	@media screen and (min-width: $breakpoint__lg) {
 		display: none;
 	}
 }
 
 .page-navigation-web {
 	display: none;
-	background-color: $color__white;
 
-	@media screen and (min-width: $breakpoint__sm) {
+	@media screen and (min-width: $breakpoint__lg) {
 		display: flex;
+		width: 275px;
+		//margin-top: 40px;
+		padding: 0;
+		background-color: $color__white;
+		//background-color: transparent;
 	}
 }
 
@@ -166,7 +168,7 @@ $color__page-menu-arrow: $color__black;
 	flex-direction: column;
 	width: 275px;
 	margin: 0;
-	padding: 10px 0;
+	padding: 0;
 	background-color: $color__white;
 	list-style: none;
 

@@ -56,7 +56,9 @@
 		}
 
 		&.current-menu-item > a > span {
-			border-bottom: 3px solid $color__yellow;
+			border-bottom-width: 3px;
+			border-bottom-style: solid;
+			// border-bottom-color set in customizer.php
 		}
 
 		ul {
@@ -84,7 +86,7 @@
 	a.focus,
 	a:focus,
 	a:active {
-		color: $color__yellow;
+		// color set in customizer.php
 		text-decoration: none;
 	}
 
@@ -154,7 +156,7 @@
 		position: relative;
 
 		.search-button {
-			padding-top: 0;
+			padding-top: 8px;
 
 			svg {
 				position: relative;
@@ -203,12 +205,12 @@
 				ul {
 					display: block;
 					position: absolute;
-					top: 47px;
+					top: 75px;
 					left: -999em;
 					width: auto;
 					padding: 10px 0;
 					opacity: 0;
-					background-color: $color__blue-md;
+					background-color: $color__blue-dk;
 					white-space: nowrap;
 					list-style: none;
 					transition: opacity 0.25s ease, left 0s linear 0.25s, transform 0s linear 0.25s;
@@ -221,7 +223,7 @@
 							display: block;
 							width: auto;
 							padding: 12px 25px;
-							color: $color__black;
+							color: $color__white;
 
 							span::after {
 								display: none;
@@ -232,9 +234,10 @@
 
 				&.focus ul,
 				&:hover ul {
-					left: 15px;
+					left: 50%;
 					opacity: 1;
 					transition: left 0s linear, opacity 0.25s ease 0.01s;
+					transform: translateX(-50%);
 
 					li ul {
 						left: -999em;
@@ -248,9 +251,11 @@
 					}
 				}
 
-				&.focus:nth-child(n + 5) ul,
-				&:hover:nth-child(n + 5) ul {
-					left: calc(100% - 15px);
+				// adjust (n + X) such that X = the number of menu items
+
+				&.focus:nth-child(n + 6) ul,
+				&:hover:nth-child(n + 6) ul {
+					left: 100%;
 					transform: translateX(-100%);
 
 					li ul {

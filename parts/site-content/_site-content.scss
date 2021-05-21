@@ -51,16 +51,10 @@
 
 		margin-top: -50px;
 	}
-	.content-area {
-		margin-top: 0;
-	}
+}
 
+@include bp($breakpoint__lg) {
 	.hentry {
 		display: flex;
-	}
-
-	.entry-content {
-		margin: 20px 35px 0;
-		padding: 0;
 	}
 }

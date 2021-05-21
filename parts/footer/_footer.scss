@@ -19,7 +19,7 @@
 
 @include bp($breakpoint__sm) {
 	.site-footer {
-		margin: 0 $padding__tablet;
+		margin: 0 $padding__tablet 40px;
 	}
 }
 

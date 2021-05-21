@@ -2,28 +2,45 @@
 @import "../../../variables/index";
 
 .wp-block-uncgonline-block-indent {
+	flex-direction: column;
 	margin-top: 1.5em;
 	margin-right: -$padding__mobile;
 	margin-left: -$padding__mobile;
-	padding: 40px;
+	padding: 40px $padding__mobile 10px;
 	border: none;
 	border-top-width: 2px;
 	border-top-style: solid;
-	border-bottom-width: 2px;
-	border-bottom-style: solid;
+	// border-top-color set in customizer.php
 	background-color: $color__white;
 
 	.indent-icon {
-		display: inline-block;
+		position: relative;
 		width: 80px;
-		height: 80px;
-		margin-bottom: 20px;
-		border-radius: 50%;
+		height: 60px;
+		margin-top: 0;
+		margin-bottom: 30px;
+		margin-left: -(70px - $padding__mobile);
+		border-radius: 0;
 		// background-color set in customizer.php;
 
+		&::after {
+			position: absolute;
+			top: 0;
+			right: -20px;
+			width: 0;
+			height: 0;
+			border-top: 30px solid transparent;
+			border-bottom: 30px solid transparent;
+			border-left-width: 20px;
+			border-left-style: solid;
+			content: "";
+		}
+
 		svg {
-			max-width: 35px;
-			max-height: 35px;
+			left: 60%;
+			width: 40px;
+			height: 40px;
+
 			.st0 {
 				fill: $color__white;
 			}
@@ -31,10 +48,14 @@
 	}
 
 	.indent-content {
+		width: auto;
+		margin: 0;
+
 		ul,
 		ol {
 			overflow: hidden;
 		}
+
 		p:last-of-type {
 			margin-bottom: 0;
 		}
@@ -48,16 +69,26 @@
 }
 
 @include bp($breakpoint__sm) {
-	.indent-block {
-		display: flex;
-		margin-top: 1.5em;
-		margin-right: 0;
-		margin-left: 0;
+	.wp-block-uncgonline-block-indent {
+		flex-direction: row;
+		margin-right: -$padding__tablet;
+		margin-left: -$padding__tablet;
+		padding-left: 0;
 
 		.indent-icon {
-			margin: 0 20px 0 0;
+			margin: 0 20px 0 -12px;
 
 			flex-shrink: 0;
 		}
+
+		.indent-content {
+			margin-left: 20px;
+		}
+	}
+}
+
+@include bp($breakpoint__lg) {
+	.entry-content .wp-block-uncgonline-block-indent {
+		border-top-color: $color__yellow;
 	}
 }

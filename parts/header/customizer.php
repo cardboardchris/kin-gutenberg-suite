@@ -28,6 +28,10 @@ function uncgonline_customizer_defaults() {
 
     $uncgonline_customizer_defaults['primary_color'] = '#919191';
 
+    $uncgonline_customizer_defaults['secondary_color'] = '#919191';
+
+    $uncgonline_customizer_defaults['tertiary_color'] = '#919191';
+
     $uncgonline_customizer_defaults['custom_css'] = '';
 
     $uncgonline_customizer_vals['custom_css_file'] = false;
@@ -44,6 +48,14 @@ function uncgonline_customizer_values() {
     $uncgonline_customizer_vals = uncgonline_customizer_defaults();
     if ( get_field( 'primary_color', 'option' ) ) {
         $uncgonline_customizer_vals['primary_color'] = get_field( 'primary_color', 'option' );
+    }
+
+    if ( get_field( 'secondary_color', 'option' ) ) {
+        $uncgonline_customizer_vals['secondary_color'] = get_field( 'secondary_color', 'option' );
+    }
+
+    if ( get_field( 'tertiary_color', 'option' ) ) {
+        $uncgonline_customizer_vals['tertiary_color'] = get_field( 'tertiary_color', 'option' );
     }
 
     if ( get_field( 'custom_css', 'option' ) ) {
@@ -66,14 +78,8 @@ function uncgonline_customizer_css() {
 
     ?>
     <style type="text/css">
-        .entry-content a {
-            color: <?php echo esc_html( $uncgonline_customizer_vals['primary_color'] ); ?>;
-        }
-
-        .entry-content a:visited {
-            color: <?php echo esc_html( $uncgonline_customizer_vals['primary_color'] ); ?>;
-        }
-
+        .entry-content a,
+        .entry-content a:visited,
         .entry-content a:active,
         .entry-content a:focus,
         .entry-content a:hover {
@@ -85,23 +91,44 @@ function uncgonline_customizer_css() {
             background-color: <?php echo esc_html( $uncgonline_customizer_vals['primary_color'] ); ?>;
         }
 
-        .wp-block-uncgonline-block-indent {
+        .wp-block-uncgonline-block-indent,
+        .wp-block-uncgonline-block-btlo,
+        .wp-block-uncgonline-block-tabs .nav-tabs .nav-item .nav-link.active {
             border-top-color: <?php echo esc_html( $uncgonline_customizer_vals['primary_color'] ); ?>;
-            border-bottom-color: <?php echo esc_html( $uncgonline_customizer_vals['primary_color'] ); ?>;
         }
 
-        /*.indent-icon svg .st0 {*/
-        /*    fill: */<?php //echo esc_html( $uncgonline_customizer_vals['primary_color'] ); ?>/*;*/
-        /*}*/
+        .wp-block-uncgonline-block-indent .indent-icon:after,
+        .wp-block-uncgonline-block-accordion .accordion-header .accordion-button[aria-expanded="true"] {
+            border-left-color: <?php echo esc_html( $uncgonline_customizer_vals['primary_color'] ); ?>;
+        }
 
-        .button,
-        .button:visited,
-        button,
-        input[type=button],
-        input[type=reset],
-        input[type=submit],
-        .spartan-pagination-nav-buttons ul li a {
-            background-color: <?php echo esc_html( $uncgonline_customizer_vals['primary_color'] ); ?>;
+        .menu-toggle[aria-expanded="true"] svg .st0,
+        .menu-toggle[aria-expanded="true"] svg .st2,
+        .search-button[aria-expanded="true"] svg .st0 {
+            fill: <?php echo esc_html( $uncgonline_customizer_vals['secondary_color'] ); ?>;
+        }
+
+        .search-box {
+            border-color: <?php echo esc_html( $uncgonline_customizer_vals['secondary_color'] ); ?>;
+        }
+
+        .main-navigation ul li.current-menu-item > a > span {
+            border-bottom-color: <?php echo esc_html( $uncgonline_customizer_vals['secondary_color'] ); ?>;
+        }
+
+        .main-navigation ul a:hover,
+        .main-navigation ul a.focus,
+        .main-navigation ul a:focus,
+        .main-navigation ul a:active {
+            color: <?php echo esc_html( $uncgonline_customizer_vals['secondary_color'] ); ?>;
+        }
+
+        button:hover,
+        input[type=button]:hover,
+        input[type=reset]:hover,
+        input[type=submit]:hover,
+        .spartan-pagination-nav-buttons ul li a:hover {
+            background-color: <?php echo esc_html( $uncgonline_customizer_vals['tertiary_color'] ); ?>;
         }
 
         <?php

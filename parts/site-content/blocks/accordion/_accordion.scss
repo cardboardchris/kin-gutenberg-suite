@@ -1,0 +1,68 @@
+@import "../../../variables/index";
+
+.wp-block-uncgonline-block-accordion {
+	.accordion-item {
+		margin: 1rem 0;
+
+		.accordion-header {
+			font-size: 17px;
+
+			.accordion-button {
+				padding: 16px;
+				border: none;
+				background-color: $color__gray-lt;
+
+				&:before,
+				&:after {
+					display: block;
+					position: absolute;
+					top: 50%;
+					right: 25px;
+					width: 13px;
+					height: 13px;
+					opacity: 1;
+					background-color: $color__blue-dk;
+					background-image: none;
+					content: "";
+					transition: 0.25s;
+					transform: translateY(-50%);
+				}
+
+				&:before {
+					width: 14px;
+					height: 2px;
+				}
+
+				&:after {
+					right: 31px;
+					width: 2px;
+					height: 14px;
+				}
+
+				&[aria-expanded="true"] {
+					border-left-width: 5px;
+					border-left-style: solid;
+					// border-left-color set in customizer.php
+					background-color: $color__blue-lt;
+
+					&:after {
+						height: 0;
+						background-color: $color__blue-dk;
+					}
+				}
+			}
+		}
+
+		.accordion-collapse {
+			border: none;
+
+			.accordion-body {
+				padding: 30px 30px 20px;
+
+				& > p:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

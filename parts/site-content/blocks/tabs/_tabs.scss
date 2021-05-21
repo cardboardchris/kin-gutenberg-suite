@@ -3,4 +3,40 @@
 
 .wp-block-uncgonline-block-tabs {
 	@include universal-bottom-margin;
+
+	margin-right: -($padding__mobile);
+	margin-left: -($padding__mobile);
+
+	.nav-tabs {
+		overflow: scroll;
+		margin-left: 15px;
+		border: none;
+
+		flex-wrap: nowrap;
+
+		.nav-item {
+			margin: 0 5px;
+
+			.nav-link {
+				padding: 10px 16px;
+				border: none;
+				border-top: 4px solid $color__white;
+				border-radius: 0;
+				color: $color__black;
+				background-color: $color__gray-md;
+				font-weight: 700;
+				white-space: nowrap;
+
+				&.active {
+					background-color: $color__gray-lt;
+					// border-top-color set in customizer.php
+				}
+			}
+		}
+	}
+
+	.tab-content {
+		border: none;
+		background-color: $color__gray-lt;
+	}
 }

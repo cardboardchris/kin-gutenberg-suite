@@ -1,7 +1,7 @@
 @import "../../../mixins/index";
 @import "../../../variables/index";
 
-.check-point-block {
+.wp-block-uncgonline-block-checkpoint-quiz {
 	@include universal-bottom-margin;
 
 	.check-point-description {
@@ -63,6 +63,15 @@
 			bottom: 10px;
 			left: 0;
 		};
+		padding: 12px 16px;
+		border: none;
+		border-radius: 0;
+		color: $color__white;
+		background-color: $color__blue-dk;
+		font-size: 15px;
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
 		cursor: pointer;
 	}
 }

@@ -44,7 +44,7 @@ $color__text-pagination: $color__white;
 
 		a {
 			&:hover {
-				background-color: $color__blue-dk;
+				background-color: $color__red;
 				text-decoration: none;
 			}
 
@@ -73,6 +73,7 @@ $color__text-pagination: $color__white;
 				margin: 0 2px;
 				padding: 8px 0;
 				color: $color__text-pagination;
+				background-color: $color__blue-dk;
 				font-family: $font__main;
 				font-size: 15px;
 				text-decoration: none;

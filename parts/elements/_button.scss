@@ -12,6 +12,7 @@ input[type="submit"] {
 	padding: 12px 16px;
 	border: none;
 	color: $color__text-button;
+	background-color: $color__blue-dk;
 	font-size: 16px;
 	line-height: 1;
 	text-decoration: none;
@@ -20,6 +21,7 @@ input[type="submit"] {
 	&:focus,
 	&:hover {
 		color: $color__text-button;
+		background-color: $color__red;
 		text-decoration: none;
 		cursor: pointer;
 	}

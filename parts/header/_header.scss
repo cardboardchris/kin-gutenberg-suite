@@ -14,7 +14,7 @@
 	.site-branding {
 		display: flex;
 		width: 100%;
-		margin: 20px 0;
+		margin: 10px 0;
 
 		p.site-title {
 			margin: 0;
@@ -48,6 +48,7 @@
 
 .site-banner {
 	@include universal-max-width;
+	@include universal-padding;
 
 	height: 150px;
 	background-position: center;

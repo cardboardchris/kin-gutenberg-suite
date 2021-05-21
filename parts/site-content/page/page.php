@@ -11,6 +11,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+    <?php
+    //    if ( get_current_page_depth() > 1 ) {
+    include(__DIR__.'/page-menu/page-menu.php');
+    //    }
+    ?>
+
     <div class="entry-content">
 
         <header class="entry-header">

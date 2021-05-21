@@ -1,7 +1,5 @@
 <div class="page-navigation">
-    <?php if ( get_depth(get_post($post->post_parent)) > 0 ) : ?>
-        <p class="parent-title"><?php echo get_post($post->post_parent)->post_title; ?></p>
-    <?php endif; ?>
+    <p class="parent-title"><?php echo get_post($post->post_parent)->post_title; ?></p>
     <nav class="page-navigation-mobile dropdown" role="navigation" aria-label="topic navigation">
         <button class="dropdown-toggle" type="button" id="secondaryMenuButton" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
