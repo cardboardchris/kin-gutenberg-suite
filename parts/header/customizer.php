@@ -87,13 +87,14 @@ function uncgonline_customizer_css() {
         }
 
         .table .table-row .table-cell.column-header,
+        .wp-block-uncgonline-block-indent:before,
         .wp-block-uncgonline-block-indent .indent-icon {
             background-color: <?php echo esc_html( $uncgonline_customizer_vals['primary_color'] ); ?>;
         }
 
-        .wp-block-uncgonline-block-indent,
         .wp-block-uncgonline-block-btlo,
-        .wp-block-uncgonline-block-tabs .nav-tabs .nav-item .nav-link.active {
+        .wp-block-uncgonline-block-tabs .nav-tabs .nav-item .nav-link.active,
+        .site-footer .site-info {
             border-top-color: <?php echo esc_html( $uncgonline_customizer_vals['primary_color'] ); ?>;
         }
 
@@ -129,6 +130,15 @@ function uncgonline_customizer_css() {
         input[type=submit]:hover,
         .spartan-pagination-nav-buttons ul li a:hover {
             background-color: <?php echo esc_html( $uncgonline_customizer_vals['tertiary_color'] ); ?>;
+        }
+
+        @media screen and (min-width: 1200px) {
+            .wp-block-uncgonline-block-indent:before {
+                background-color: <?php echo esc_html( $uncgonline_customizer_vals['secondary_color'] ); ?>;
+            }
+            .site .site-footer .site-info {
+                border-top-color: <?php echo esc_html( $uncgonline_customizer_vals['secondary_color'] ); ?>;
+            }
         }
 
         <?php

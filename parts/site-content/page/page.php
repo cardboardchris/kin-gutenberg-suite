@@ -12,9 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <?php
-    //    if ( get_current_page_depth() > 1 ) {
-    include(__DIR__.'/page-menu/page-menu.php');
-    //    }
+        include(__DIR__.'/page-menu/page-menu-mobile.php');
     ?>
 
     <div class="entry-content">
@@ -29,12 +27,13 @@
 
         do_action( 'spartan_pagination' );
 
-        wp_link_pages( array(
-            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'uncgonline' ),
-            'after'  => '</div>',
-        ) );
         ?>
     </div><!-- .entry-content -->
+
+    <div class="entry-navigation">
+        <?php include(__DIR__.'/page-menu/page-menu-web.php'); ?>
+    </div>
+
 </article><!-- #post-## -->
 
 <?php if ( get_edit_post_link() ) : ?>

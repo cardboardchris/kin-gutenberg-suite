@@ -1,10 +1,9 @@
 @import "parts/mixins/index";
 @import "parts/variables/index";
-$color__border: $color__blue-md;
 $color__text-page-menu: $color__black;
 $color__page-menu-arrow: $color__black;
 
-.page-navigation {
+.page-navigation-mobile {
 	position: relative;
 	top: -94px;
 	max-width: 340px;
@@ -27,32 +26,6 @@ $color__page-menu-arrow: $color__black;
 			text-decoration: underline;
 		}
 	}
-
-	@media screen and (min-width: $breakpoint__sm) {
-		top: -72px;
-	}
-
-	@media screen and (min-width: $breakpoint__lg) {
-		top: 0;
-		margin: 25px 0 0;
-		.parent-title {
-			display: block;
-			margin: 10px 25px;
-			padding: 0;
-			font:  {
-				size: 17px;
-				weight: 800;
-			}
-			text-transform: uppercase;
-		}
-	}
-}
-
-.home .page-navigation {
-	display: none;
-}
-
-.page-navigation-mobile {
 	.dropdown-toggle {
 		width: 100%;
 		padding: 12px 20px;
@@ -144,82 +117,15 @@ $color__page-menu-arrow: $color__black;
 			}
 		}
 	}
+	@media screen and (min-width: $breakpoint__sm) {
+		top: -72px;
+	}
 
 	@media screen and (min-width: $breakpoint__lg) {
 		display: none;
 	}
 }
 
-.page-navigation-web {
+.home .page-navigation-mobile {
 	display: none;
-
-	@media screen and (min-width: $breakpoint__lg) {
-		display: flex;
-		width: 275px;
-		//margin-top: 40px;
-		padding: 0;
-		background-color: $color__white;
-		//background-color: transparent;
-	}
-}
-
-.page-navigation-web-list {
-	display: flex;
-	flex-direction: column;
-	width: 275px;
-	margin: 0;
-	padding: 0;
-	background-color: $color__white;
-	list-style: none;
-
-	justify-content: center;
-
-	a {
-		display: block;
-		padding: 10px 25px;
-		color: $color__black;
-		font:  {
-			family: $font__main;
-			size: 17px;
-		}
-
-		&:active,
-		&:focus,
-		&:hover {
-			text-decoration: none;
-		}
-	}
-
-	li {
-		overflow: hidden;
-		position: relative;
-
-		&.current_page_item,
-		&:active,
-		&:focus,
-		&:hover {
-			position: relative;
-			background-color: $color__blue-lt;
-
-			a {
-				color: $color__blue-md;
-			}
-		}
-
-		&.current_page_item:after {
-			display: block;
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 5px;
-			height: 100%;
-			margin: 0;
-			background-color: $color__blue-md;
-			content: "";
-		}
-	}
-
-	ul.children {
-		display: none;
-	}
 }

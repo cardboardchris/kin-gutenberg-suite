@@ -32,11 +32,13 @@
 .entry-content,
 .entry-summary {
 	@include universal-padding;
-	@include universal-max-width;
+	//@include universal-max-width;
 }
 
 .entry-content {
 	padding-top: 20px;
+
+	flex-grow: 1;
 }
 
 .page-links {
@@ -54,7 +56,17 @@
 }
 
 @include bp($breakpoint__lg) {
-	.hentry {
+	.entry-content {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	article {
 		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	.home .entry-content {
+		@include universal-padding;
 	}
 }

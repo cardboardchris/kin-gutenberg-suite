@@ -3,28 +3,17 @@
 
 .wp-block-uncgonline-block-btlo {
 	@include universal-bottom-margin;
+	@include universal-padding;
 
 	margin-right: -($padding__mobile);
 	margin-left: -($padding__mobile);
 	border: none;
 	border-top-width: 2px;
 	border-top-style: solid;
-	//.btlo-description {
-	//	position: relative;
-	//	margin-bottom: 20px;
-	//}
 
 	.wp-block-uncgonline-block-btlo-node {
-		//overflow: hidden;
-		//position: relative;
-
 		.btlo-nav-button {
-			margin:  {
-				top: 10px;
-				right: 10px;
-				bottom: 10px;
-				left: 0;
-			};
+			margin: 10px 10px 10px 0;
 			padding: 12px 16px;
 			border: none;
 			border-radius: 0;
@@ -48,5 +37,18 @@
 		button {
 			padding: 10px 20px;
 		}
+	}
+}
+
+@include bp($breakpoint__md) {
+	.wp-block-uncgonline-block-btlo {
+		margin-right: -($padding__tablet);
+		margin-left: -($padding__tablet);
+	}
+}
+
+@include bp($breakpoint__lg) {
+	.content-area .wp-block-uncgonline-block-btlo {
+		border-top-color: $color__yellow;
 	}
 }
