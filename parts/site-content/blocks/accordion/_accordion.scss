@@ -1,6 +1,7 @@
 @import "../../../variables/index";
 
 .wp-block-uncgonline-block-accordion {
+	margin: 20px 0;
 	.accordion-item {
 		margin: 1rem 0;
 
@@ -8,9 +9,15 @@
 			font-size: 17px;
 
 			.accordion-button {
+				width: 100%;
 				padding: 16px;
 				border: none;
 				background-color: $color__gray-lt;
+				text-align: left;
+
+				&:hover {
+					text-decoration: underline;
+				}
 
 				&:before,
 				&:after {
@@ -42,6 +49,7 @@
 				&[aria-expanded="true"] {
 					border-left-width: 5px;
 					border-left-style: solid;
+					color: $color__black;
 					// border-left-color set in customizer.php
 					background-color: $color__blue-lt;
 

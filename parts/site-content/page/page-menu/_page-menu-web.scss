@@ -5,7 +5,8 @@
 	display: none;
 	@media screen and (min-width: $breakpoint__lg) {
 		display: block;
-		padding: 25px 20px 0 0;
+		margin-right: -20px;
+		//padding: 25px 20px 0 0;
 
 		.page-navigation-web {
 			@media screen and (min-width: $breakpoint__lg) {
@@ -14,7 +15,7 @@
 				position: relative;
 				top: 0;
 				width: 280px;
-				//margin: 0;
+				margin-right: 20px;
 				padding: 0 20px 0 0;
 				background-color: $color__white;
 
@@ -53,7 +54,7 @@
 					&:active,
 					&:focus,
 					&:hover {
-						text-decoration: none;
+						text-decoration: underline;
 					}
 				}
 
@@ -61,10 +62,7 @@
 					overflow: hidden;
 					position: relative;
 
-					&.current_page_item,
-					&:active,
-					&:focus,
-					&:hover {
+					&.current_page_item {
 						position: relative;
 						background-color: $color__blue-lt;
 
@@ -92,8 +90,4 @@
 			}
 		}
 	}
-}
-
-.home .entry-navigation .page-navigation-web {
-	display: none;
 }

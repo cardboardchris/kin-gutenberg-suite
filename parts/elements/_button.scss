@@ -1,12 +1,12 @@
 @import "../variables/index";
 $color__text-button: $color__white;
 
-button,
-.button,
-.button:visited,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+.entry-content button,
+.entry-content .button,
+.entry-content .button:visited,
+.entry-content input[type="button"],
+.entry-content input[type="reset"],
+.entry-content input[type="submit"] {
 	display: block;
 	width: fit-content;
 	padding: 12px 16px;
@@ -21,8 +21,23 @@ input[type="submit"] {
 	&:focus,
 	&:hover {
 		color: $color__text-button;
-		background-color: $color__red;
+		// background-color set in customizer.php
 		text-decoration: none;
 		cursor: pointer;
 	}
+}
+
+.wp-block-uncgonline-block-btlo-node .btlo-nav-button,
+.wp-block-uncgonline-block-checkpoint-quiz button {
+	display: inline-block;
+	margin: 10px 10px 10px 0;
+	padding: 12px 16px;
+	border: none;
+	border-radius: 0;
+	color: $color__white;
+	background-color: $color__blue-dk;
+	font-size: 15px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
 }

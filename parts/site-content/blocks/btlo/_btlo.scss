@@ -11,21 +11,6 @@
 	border-top-width: 2px;
 	border-top-style: solid;
 
-	.wp-block-uncgonline-block-btlo-node {
-		.btlo-nav-button {
-			margin: 10px 10px 10px 0;
-			padding: 12px 16px;
-			border: none;
-			border-radius: 0;
-			color: $color__white;
-			background-color: $color__blue-dk;
-			font-size: 15px;
-			font-weight: 700;
-			text-align: center;
-			text-transform: uppercase;
-		}
-	}
-
 	button {
 		margin: 10px 0;
 	}
@@ -48,7 +33,7 @@
 }
 
 @include bp($breakpoint__lg) {
-	.content-area .wp-block-uncgonline-block-btlo {
-		border-top-color: $color__yellow;
+	.content-area .wp-block-uncgonline-block-btlo .wp-block-uncgonline-block-btlo-node {
+		padding: 20px 0;
 	}
 }

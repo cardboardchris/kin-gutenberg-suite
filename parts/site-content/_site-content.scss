@@ -57,16 +57,20 @@
 
 @include bp($breakpoint__lg) {
 	.entry-content {
-		padding-right: 0;
+		//padding-right: 0;
 		padding-left: 0;
 	}
+
+	//.site-main {
+	//	overflow: hidden;
+	//}
 
 	article {
 		display: flex;
 		flex-direction: row-reverse;
 	}
 
-	.home .entry-content {
-		@include universal-padding;
-	}
+	//.home .entry-content {
+	//	@include universal-padding;
+	//}
 }

@@ -100,7 +100,12 @@ function uncgonline_scripts() {
 
 	wp_enqueue_style( 'uncgonline-style', get_stylesheet_uri() );
 
-	// Bootstrap.
+	// TODO make this conditional on depth, not on home page
+    if ( is_page( 'home' ) ) {
+        wp_enqueue_style( 'top-level-pages-style', get_template_directory_uri().'/top-level-pages.css' );
+    }
+
+    // Bootstrap.
 	wp_enqueue_script( 'popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js', array( 'jquery' ) );
 	wp_enqueue_script( 'bootstrap-scripts', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js', array( 'jquery', 'popper' ) );
 

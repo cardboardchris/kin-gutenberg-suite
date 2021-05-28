@@ -105,7 +105,8 @@ function uncgonline_customizer_css() {
 
         .menu-toggle[aria-expanded="true"] svg .st0,
         .menu-toggle[aria-expanded="true"] svg .st2,
-        .search-button[aria-expanded="true"] svg .st0 {
+        .search-button[aria-expanded="true"] svg .st0,
+        .search-button:hover svg .st0 {
             fill: <?php echo esc_html( $uncgonline_customizer_vals['secondary_color'] ); ?>;
         }
 
@@ -124,10 +125,12 @@ function uncgonline_customizer_css() {
             color: <?php echo esc_html( $uncgonline_customizer_vals['secondary_color'] ); ?>;
         }
 
-        button:hover,
-        input[type=button]:hover,
-        input[type=reset]:hover,
-        input[type=submit]:hover,
+        .entry-content button:hover,
+        .entry-content input[type=button]:hover,
+        .entry-content input[type=reset]:hover,
+        .entry-content input[type=submit]:hover,
+        .wp-block-uncgonline-block-checkpoint-quiz button:hover,
+        .wp-block-uncgonline-block-btlo-node .btlo-nav-button:hover,
         .spartan-pagination-nav-buttons ul li a:hover {
             background-color: <?php echo esc_html( $uncgonline_customizer_vals['tertiary_color'] ); ?>;
         }
@@ -136,7 +139,8 @@ function uncgonline_customizer_css() {
             .wp-block-uncgonline-block-indent:before {
                 background-color: <?php echo esc_html( $uncgonline_customizer_vals['secondary_color'] ); ?>;
             }
-            .site .site-footer .site-info {
+            .site .site-footer .site-info,
+            .content-area .wp-block-uncgonline-block-btlo {
                 border-top-color: <?php echo esc_html( $uncgonline_customizer_vals['secondary_color'] ); ?>;
             }
         }

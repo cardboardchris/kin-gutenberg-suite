@@ -1,0 +1,19 @@
+@media screen and (min-width: 1200px) {
+    .entry-content {
+        padding-left: 40px;
+    }
+
+    .entry-content .wp-block-uncgonline-block-indent {
+        margin: 0 -40px;
+        padding: 20px 40px;
+    }
+
+    .entry-content .wp-block-uncgonline-block-indent:before {
+        width: 100%;
+        left: 0;
+    }
+
+    .entry-content .wp-block-uncgonline-block-indent .indent-icon {
+        margin-left: -56px;
+    }
+}
