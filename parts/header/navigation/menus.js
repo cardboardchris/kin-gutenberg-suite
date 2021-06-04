@@ -6,8 +6,8 @@ jQuery(document).ready(function ($) {
     let $menu_btn = $('#menu-toggle');
     let $search_btn = $('#search-button');
     let $search_box = $('#primary-search');
-    let $page_menu_expander_btn = $('.page-navigation > nav > .dropdown-toggle');
-    let $page_menu = $('.page-navigation .dropdown-menu');
+    let $page_menu_expander_btn = $('.page-navigation-mobile > .dropdown-toggle');
+    let $page_menu = $('.page-navigation-mobile .dropdown-menu');
     let $page_parents = $primary_menu.find('.current-menu-ancestor');
 
     // toggle behavior for the mobile menu button

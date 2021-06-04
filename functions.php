@@ -101,7 +101,7 @@ function uncgonline_scripts() {
 	wp_enqueue_style( 'uncgonline-style', get_stylesheet_uri() );
 
 	// TODO make this conditional on depth, not on home page
-    if ( is_page( 'home' ) ) {
+    if ( get_page_depth() === 0 ) {
         wp_enqueue_style( 'top-level-pages-style', get_template_directory_uri().'/top-level-pages.css' );
     }
 

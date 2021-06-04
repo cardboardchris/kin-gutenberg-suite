@@ -1,6 +1,6 @@
 @import "../mixins/index";
 
-.wp-caption {
+.wp-block-image {
 	max-width: 100%;
 	margin-bottom: 1.5em;
 
@@ -8,11 +8,9 @@
 		@include center-block;
 	}
 
-	.wp-caption-text {
+	figcaption {
 		margin: 0.8075em 0;
+		font-size: 15px;
+		font-style: italic;
 	}
-}
-
-.wp-caption-text {
-	text-align: center;
 }

@@ -8,6 +8,7 @@ h5,
 h6 {
 	clear: both;
 	margin-bottom: 1rem;
+	color: $color__blue-dk;
 	font-family: $font__secondary;
 	font-weight: 700;
 }
@@ -26,4 +27,11 @@ h3 {
 
 h4 {
 	font-size: 17px;
+}
+
+h1 + h2,
+h2 + h3,
+h3 + h4 {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
